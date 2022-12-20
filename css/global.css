@@ -1,0 +1,128 @@
+body{
+    font-family: 'Inter', 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    background-color: hsl(233, 47%, 7%);
+    color: hsl(0, 0%, 100%);
+    line-height: 1.5;
+}
+
+
+.container{
+    width: 94%;
+    max-width: 1024px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+section{
+    display: flex;
+    background-color: hsl(244, 38%, 16%);
+    border-radius: 16px;
+    gap: 48px;
+}
+
+
+section > *{
+    flex: 1;
+}
+
+/* Section body  */
+.section-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 40px;
+    padding-right: 40px;
+
+}
+.purple{
+    color: hsl(277, 64%, 61%);
+}
+
+.section-body h1{
+    font-family: 'Inter';
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+section .section-body p{
+    font-family: 'Inter';
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 24px;
+    color: hsla(0, 0%, 100%, 0.75);
+    max-width: 40ch;
+}
+
+
+.section-stats{
+    display: flex;
+    margin-top: 32px;
+    gap: 48px;
+}
+
+.section-stats .item h3{
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 4px;
+    
+}
+.section-stats .item p{
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: hsla(0, 0%, 100%, 0.6);
+}
+
+
+
+
+
+.section-img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.section-img img{
+    border-radius: 0 16px 16px 0;
+    width: 100%;
+    height: 375px;
+
+}
+
+.overlay{
+    position: absolute;
+    bottom: 0;
+    background: hsl(277deg 69% 29% / 51%);
+    color: #f1f1f1;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 16px 16px 0;
+    display: block;
+}
+
+
+@media (max-width: 768px) {
+    section{
+        flex-direction: column-reverse;
+    }
+    .overlay{
+        border-radius: 16px 16px 0 0;
+    }
+
+    .section-img img{
+        border-radius: 16px 16px 0 0;
+    }
+    .section-body{
+        text-align: center;
+    }
+    .section-stats{
+        justify-content: center;
+    }
+    section .section-body p{
+        max-width: 70ch;
+    }
+
+}
